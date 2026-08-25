@@ -1,3 +1,3 @@
 export default function Home() {
-	return <h1>YoruTrade</h1>;
+	return <h1>YoruTrade by Eru</h1>;
 }

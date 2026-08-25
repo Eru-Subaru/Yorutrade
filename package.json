@@ -2,6 +2,7 @@
   "name": "yorutrade",
   "private": true,
   "scripts": {
+    "build": "npm --prefix apps/web run build",
     "dev": "concurrently \"npm run dev:web\" \"npm run dev:api\"",
     "dev:web": "npm --prefix apps/web run dev",
     "dev:api": "npm --prefix apps/api run dev"

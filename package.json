@@ -1,11 +1,14 @@
 {
   "name": "yorutrade",
   "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
   "scripts": {
-    "build": "npm --prefix apps/web run build",
+    "build": "npm --workspace=web run build",
     "dev": "concurrently \"npm run dev:web\" \"npm run dev:api\"",
-    "dev:web": "npm --prefix apps/web run dev",
-    "dev:api": "npm --prefix apps/api run dev"
+    "dev:web": "npm --workspace=web run dev",
+    "dev:api": "npm --workspace=api run dev"
   },
   "devDependencies": {
     "concurrently": "^9.0.0"

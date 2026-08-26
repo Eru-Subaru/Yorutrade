@@ -13,6 +13,12 @@ app.get("/api/health", (_req, res) => {
         service: "yorutrade-api",
     });
 });
+app.get("/health", (_req, res) => {
+    res.json({
+        status: "ok",
+        service: "yorutrade-api",
+    });
+});
 app.listen(PORT, () => {
     console.log(`YoruTrade API running on http://localhost:${PORT}`);
 });

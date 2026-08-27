@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import {
   ArrowRight,
   Bell,
@@ -189,10 +190,14 @@ export default function Home() {
                 />
               </button>
 
-              <button className="flex items-center justify-center gap-3 rounded-full border border-[#aebfc0] bg-white/60 px-7 py-3.5 text-sm tracking-[0.12em] text-[#486568] transition hover:bg-white">
+              {/* ★ ここをLinkに変更 */}
+              <Link
+                href="/register"
+                className="flex items-center justify-center gap-3 rounded-full border border-[#aebfc0] bg-white/60 px-7 py-3.5 text-sm tracking-[0.12em] text-[#486568] transition hover:bg-white"
+              >
                 <Plus size={16} />
                 交換を登録する
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -269,7 +274,11 @@ export default function Home() {
             />
           </button>
 
-          <button className="group flex items-center gap-5 border-b border-[#d0dddd] px-6 py-7 text-left transition hover:bg-white/50 md:border-b-0 md:border-r">
+          {/* ★ 「グッズを交換」も登録ページへ */}
+          <Link
+            href="/register"
+            className="group flex items-center gap-5 border-b border-[#d0dddd] px-6 py-7 text-left transition hover:bg-white/50 md:border-b-0 md:border-r"
+          >
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#dfeaea]">
               <Package
                 size={20}
@@ -287,7 +296,7 @@ export default function Home() {
               size={17}
               className="text-[#9bb0b1] transition group-hover:translate-x-1"
             />
-          </button>
+          </Link>
 
           <button className="group flex items-center gap-5 px-6 py-7 text-left transition hover:bg-white/50">
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#dfeaea]">
@@ -542,9 +551,13 @@ export default function Home() {
           誰かが探しているものかもしれない。
         </h2>
 
-        <button className="mt-9 rounded-full bg-[#385c60] px-9 py-4 text-sm tracking-[0.15em] text-white shadow-lg shadow-[#385c60]/15 transition hover:bg-[#2d4e52]">
+        {/* ★ 下部CTAも登録ページへ */}
+        <Link
+          href="/register"
+          className="mt-9 inline-block rounded-full bg-[#385c60] px-9 py-4 text-sm tracking-[0.15em] text-white shadow-lg shadow-[#385c60]/15 transition hover:bg-[#2d4e52]"
+        >
           交換を登録する
-        </button>
+        </Link>
       </section>
 
       {/* Footer */}
@@ -587,9 +600,14 @@ export default function Home() {
             <span className="text-[8px]">探す</span>
           </button>
 
-          <button className="flex h-11 w-11 -translate-y-3 items-center justify-center rounded-full bg-[#385c60] text-white shadow-lg">
+          {/* ★ Mobileの＋ボタンも登録ページへ */}
+          <Link
+            href="/register"
+            aria-label="交換を登録する"
+            className="flex h-11 w-11 -translate-y-3 items-center justify-center rounded-full bg-[#385c60] text-white shadow-lg"
+          >
             <Plus size={21} strokeWidth={1.4} />
-          </button>
+          </Link>
 
           <button className="flex flex-col items-center gap-1 px-4 py-1 text-[#84999b]">
             <MessageCircle size={18} strokeWidth={1.4} />
@@ -605,4 +623,3 @@ export default function Home() {
     </main>
   );
 }
-

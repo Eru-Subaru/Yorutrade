@@ -188,3 +188,39 @@
 .paper-theme [class*="hover:bg-white"]:hover {
   background-color: #fffdfb !important;
 }
+
+.paper-theme [class*="bg-[#e3eceb]"],
+.paper-theme [class*="bg-[#e8f0ef]"],
+.paper-theme [class*="bg-[#e7efee]"],
+.paper-theme [class*="bg-[#f0f5f4]"] {
+  background-color: #cbb093 !important;
+}
+
+.paper-theme [class*="border-[#"],
+.paper-theme [class*="border-[#b9caca]"],
+.paper-theme [class*="border-[#c4d2d2]"] {
+  border-color: #a9886b !important;
+}
+
+.paper-theme [class*="text-[#3e6063]"],
+.paper-theme [class*="text-[#46676a]"],
+.paper-theme [class*="text-[#526f72]"],
+.paper-theme [class*="text-[#6d8587]"],
+.paper-theme [class*="text-[#668083]"] {
+  color: #5b3828 !important;
+}
+
+.paper-theme [class*="text-[#7a9092]"],
+.paper-theme [class*="text-[#789194]"],
+.paper-theme [class*="text-[#879a9c]"],
+.paper-theme [class*="text-[#8a9d9f]"],
+.paper-theme [class*="text-[#91a2a4]"],
+.paper-theme [class*="text-[#91a5a7]"],
+.paper-theme [class*="text-[#82999b]"] {
+  color: #795f4b !important;
+}
+
+.paper-theme [class*="bg-[#385c60]"],
+.paper-theme [class*="bg-[#527b7e]"] {
+  background-color: #4a2d20 !important;
+}

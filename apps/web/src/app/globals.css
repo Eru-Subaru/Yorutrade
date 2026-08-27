@@ -128,3 +128,63 @@
     @apply font-mono;
   }
 }
+
+.paper-theme [class*="bg-[#f3f6f5]"],
+.paper-theme [class*="bg-[#f4f8f7]"],
+.paper-theme [class*="bg-[#edf3f2]"] {
+  background-color: #f3eee5 !important;
+}
+
+.paper-theme [class*="bg-[#dbe8e8]"],
+.paper-theme [class*="bg-[#e4eeee]"],
+.paper-theme [class*="bg-[#e6eeee]"],
+.paper-theme [class*="bg-[#e8efee]"],
+.paper-theme [class*="bg-[#dfeaea]"],
+.paper-theme [class*="bg-[#dce8e7]"],
+.paper-theme [class*="bg-[#e2eceb]"] {
+  background-color: #e8ddd0 !important;
+}
+
+.paper-theme [class*="bg-[#f8faf9]"],
+.paper-theme [class*="bg-[#f7faf9]"],
+.paper-theme [class*="bg-[#f9fbfa]"],
+.paper-theme [class*="bg-white"] {
+  background-color: #faf5f0 !important;
+}
+
+.paper-theme [class*="text-[#26383a]"],
+.paper-theme [class*="text-[#425e61]"],
+.paper-theme [class*="text-[#201d1b]"],
+.paper-theme [class*="text-[#1d1b1a]"] {
+  color: #2d2927 !important;
+}
+
+.paper-theme [class*="text-[#527b7e]"],
+.paper-theme [class*="text-[#5c8588]"],
+.paper-theme [class*="text-[#5e8588]"],
+.paper-theme [class*="text-[#729093]"],
+.paper-theme [class*="text-[#6f9799]"] {
+  color: #6f5747 !important;
+}
+
+.paper-theme [class*="text-[#526d70]"],
+.paper-theme [class*="text-[#667d80]"],
+.paper-theme [class*="text-[#648487]"],
+.paper-theme [class*="text-[#819799]"],
+.paper-theme [class*="text-[#839799]"],
+.paper-theme [class*="text-[#748c8e]"],
+.paper-theme [class*="text-[#84999b]"] {
+  color: #75665b !important;
+}
+
+.paper-theme [class*="border-[#"] {
+  border-color: #c9b9a6 !important;
+}
+
+.paper-theme [class*="bg-[#385c60]"] {
+  background-color: #2f2a28 !important;
+}
+
+.paper-theme [class*="hover:bg-white"]:hover {
+  background-color: #fffdfb !important;
+}

@@ -11,7 +11,6 @@ import {
   Heart,
   Menu,
   MessageCircle,
-  Moon,
   Package,
   Plus,
   Search,
@@ -66,14 +65,14 @@ export default function Home() {
       : items.filter((item) => item.category === activeTab);
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#f3f6f5] text-[#26383a]">
+    <main className="paper-theme min-h-screen overflow-hidden bg-[#f3f6f5] text-[#26383a]">
       {/* Background atmosphere */}
       <div className="pointer-events-none fixed inset-0 -z-0 overflow-hidden">
         <div className="absolute -right-32 -top-32 h-[420px] w-[420px] rounded-full bg-[#dbe8e8] blur-3xl" />
         <div className="absolute -left-40 top-[55%] h-[400px] w-[400px] rounded-full bg-[#e4eeee] blur-3xl" />
 
-        <div className="absolute right-[9%] top-[12%] text-[#a9c5c7] opacity-50">
-          <Moon size={150} strokeWidth={0.7} />
+        <div className="absolute right-[9%] top-[12%] opacity-15">
+          <img src="/deer.svg" alt="" className="h-[150px] w-[150px]" />
         </div>
 
         <div className="absolute left-[4%] top-[35%] h-px w-32 rotate-[-18deg] bg-[#9eb9bb] opacity-40" />
@@ -85,12 +84,7 @@ export default function Home() {
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-10">
           <a href="#" className="group flex items-center gap-3">
             <div className="relative flex h-10 w-10 items-center justify-center">
-              <Moon
-                size={34}
-                strokeWidth={1}
-                className="text-[#50777a]"
-              />
-              <span className="absolute left-[18px] top-[7px] h-1.5 w-1.5 rounded-full bg-[#50777a]" />
+              <img src="/deer.svg" alt="" className="h-8 w-8 text-[#50777a]" />
             </div>
 
             <div>
@@ -215,17 +209,13 @@ export default function Home() {
               <div className="mt-14 flex justify-center">
                 <div className="relative flex h-32 w-32 items-center justify-center rounded-full border border-[#9fbabc]">
                   <div className="absolute h-24 w-24 rounded-full border border-[#c6d6d7]" />
-                  <Moon
-                    size={62}
-                    strokeWidth={0.8}
-                    className="text-[#5d8588]"
-                  />
+                  <img src="/deer.svg" alt="" className="h-[62px] w-[62px]" />
                 </div>
               </div>
 
               <div className="mt-10 text-center">
                 <div className="font-serif text-lg tracking-[0.2em]">
-                  誰かの個体さんへ
+                  個体さんへ
                 </div>
                 <div className="mt-2 text-[9px] tracking-[0.3em] text-[#819799]">
                   YORUTRADE
@@ -443,8 +433,8 @@ export default function Home() {
 
       {/* Anonymous exchange section */}
       <section className="relative z-10 overflow-hidden border-y border-[#cad9d9] bg-[#e6eeee]">
-        <div className="absolute right-[-50px] top-[-100px] opacity-20">
-          <Moon size={320} strokeWidth={0.5} />
+        <div className="absolute right-[-50px] top-[-100px] opacity-10">
+          <img src="/deer.svg" alt="" className="h-[320px] w-[320px]" />
         </div>
 
         <div className="relative mx-auto max-w-7xl px-5 py-20 lg:px-10">
@@ -588,7 +578,7 @@ export default function Home() {
       <nav className="fixed bottom-0 left-0 right-0 z-50 border-t border-[#cad9d9] bg-[#f4f8f7]/95 px-4 py-2 backdrop-blur-xl md:hidden">
         <div className="mx-auto flex max-w-md items-center justify-around">
           <button className="flex flex-col items-center gap-1 px-4 py-1 text-[#527b7e]">
-            <Moon size={18} strokeWidth={1.4} />
+            <img src="/deer.svg" alt="" className="h-[18px] w-[18px]" />
             <span className="text-[8px]">ホーム</span>
           </button>
 

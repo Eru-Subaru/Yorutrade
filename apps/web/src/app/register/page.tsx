@@ -229,7 +229,7 @@ export default function RegisterPage() {
 
                 <textarea
                   rows={4}
-                  placeholder="グッズについて伝えておきたいことがあれば記入してください。"
+                  placeholder="キーホルダーについて伝えておきたいことがあれば記入してください。"
                   className="w-full resize-none border border-[#cedcdc] bg-white/70 px-4 py-3.5 text-sm leading-7 outline-none transition placeholder:text-[#a7b5b6] focus:border-[#709294] focus:bg-white"
                 />
               </div>

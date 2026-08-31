@@ -1,10 +1,41 @@
 "use client";
 
 import { useState } from "react";
+import keychain01 from "../img/01. playsick.png";
+import keychain02 from "../img/02. aporia.png";
+import keychain03 from "../img/03. moonbath.png";
+import keychain04 from "../img/04. mashou.png";
+import keychain05 from "../img/05. hanamozawameku.png";
+import keychain06 from "../img/06. shura.png";
+import keychain07 from "../img/07. post haru.png";
+import keychain08 from "../img/08. kumoninaru.png";
+import keychain09 from "../img/09. kaseijin.png";
+import keychain10 from "../img/10. wasuretekudasai.png";
+import keychain11 from "../img/11. umeki.png";
+import keychain12 from "../img/12. taiyou.png";
+import keychain13 from "../img/13. haru.png";
+import keychain14 from "../img/14. rubato.png";
+import keychain15 from "../img/15. kasou.png";
+import keychain16 from "../img/16. chidori.png";
+import keychain17 from "../img/17. hebi.png";
+import keychain18 from "../img/18. kai.png";
+import keychain19 from "../img/19. hitchcock.png";
+import keychain20 from "../img/20. kitsutsuki.png";
+import pick01 from "../img/pick 01.png";
+import pick02 from "../img/pick 02.png";
+import pick03 from "../img/pick 03.png";
+import pick04 from "../img/pick 04.png";
+import pick05 from "../img/pick 05.png";
+import pick06 from "../img/pick 06.png";
+import pick07 from "../img/pick 07.png";
+import pick08 from "../img/pick 08.png";
+import pick09 from "../img/pick 09.png";
+import pick10 from "../img/pick 10.png";
 
 type Item = {
   id: number;
   name: string;
+  image?: string | { src: string };
 };
 
 type GachaType = "keychain" | "pick";
@@ -16,14 +47,75 @@ type PageState =
   | "chat"
   | "completed";
 
+const keychainImages = [
+  keychain01,
+  keychain02,
+  keychain03,
+  keychain04,
+  keychain05,
+  keychain06,
+  keychain07,
+  keychain08,
+  keychain09,
+  keychain10,
+  keychain11,
+  keychain12,
+  keychain13,
+  keychain14,
+  keychain15,
+  keychain16,
+  keychain17,
+  keychain18,
+  keychain19,
+  keychain20,
+];
+
+const keychainNames = [
+  "プレイシック",
+  "アポリア",
+  "月光浴",
+  "魔性",
+  "花も騒めく",
+  "修羅",
+  "ポスト春",
+  "雲になる",
+  "火星人",
+  "忘れてください",
+  "うめき",
+  "太陽",
+  "晴る",
+  "ルバート",
+  "火葬",
+  "千鳥",
+  "へび",
+  "櫂",
+  "ヒッチコック",
+  "啄木鳥",
+];
+
 const keychains: Item[] = Array.from({ length: 20 }, (_, index) => ({
   id: index + 1,
-  name: String(index + 1).padStart(2, "0"),
+  name: keychainNames[index],
+  image: keychainImages[index],
 }));
+
+const pickImages = [
+  pick01,
+  pick02,
+  pick03,
+  pick04,
+  pick05,
+  pick06,
+  pick07,
+  pick08,
+  pick09,
+  pick10,
+];
 
 const guitarPicks: Item[] = Array.from({ length: 10 }, (_, index) => ({
   id: index + 1,
   name: String(index + 1).padStart(2, "0"),
+  image: pickImages[index],
 }));
 
 export default function Home() {
@@ -284,19 +376,27 @@ export default function Home() {
                         : "border-[#d8cdbd] bg-[#eee8dd] hover:border-[#aa9c8a]"
                     }`}
                   >
-                    <div className="flex h-full flex-col items-center justify-center">
-                      <div
-                        className={`flex h-16 w-16 items-center justify-center rounded-full border font-serif text-lg ${
-                          isSelected
-                            ? "border-[#796a58] bg-[#d8cbb9]"
-                            : "border-[#c7baaa] bg-[#e7dfd3]"
-                        }`}
-                      >
-                        {item.name}
-                      </div>
+                    <div className="flex h-full flex-col items-center justify-center p-2">
+                      {item.image ? (
+                        <img
+                          src={typeof item.image === "string" ? item.image : item.image.src}
+                          alt={item.name}
+                          className="h-16 w-16 rounded-full border border-[#c7baaa] object-cover"
+                        />
+                      ) : (
+                        <div
+                          className={`flex h-16 w-16 items-center justify-center rounded-full border font-serif text-lg ${
+                            isSelected
+                              ? "border-[#796a58] bg-[#d8cbb9]"
+                              : "border-[#c7baaa] bg-[#e7dfd3]"
+                          }`}
+                        >
+                          {item.name}
+                        </div>
+                      )}
 
-                      <span className="mt-3 text-[10px] tracking-[0.2em] text-[#776c5f]">
-                        ITEM
+                      <span className="mt-3 text-center text-[10px] tracking-[0.12em] text-[#776c5f]">
+                        {item.name}
                       </span>
                     </div>
 

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import keychain01 from "../img/01. playsick.png";
 import keychain02 from "../img/02. aporia.png";
@@ -378,9 +379,12 @@ export default function Home() {
                   >
                     <div className="flex h-full flex-col items-center justify-center p-2">
                       {item.image ? (
-                        <img
+                        <Image
                           src={typeof item.image === "string" ? item.image : item.image.src}
                           alt={item.name}
+                          width={64}
+                          height={64}
+                          unoptimized
                           className="h-16 w-16 rounded-full border border-[#c7baaa] object-cover"
                         />
                       ) : (
@@ -825,10 +829,13 @@ export default function Home() {
                       {msg.images && (
                         <div className="grid max-w-[15rem] grid-cols-2 gap-2">
                           {msg.images.map((image) => (
-                            <img
+                            <Image
                               key={image.url}
                               src={image.url}
                               alt={image.name}
+                              width={120}
+                              height={120}
+                              unoptimized
                               className="aspect-square w-full object-cover"
                             />
                           ))}

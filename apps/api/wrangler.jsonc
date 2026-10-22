@@ -1,0 +1,24 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "yorutrade-api",
+  "main": "src/worker.ts",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": true,
+  "triggers": { "crons": ["17 3 * * *"] },
+  "vars": {
+    "ALLOWED_ORIGINS": "https://yorutrade.vercel.app",
+    "LOCAL_DEV": "false"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "yorutrade",
+      // Replace with the ID returned by `wrangler d1 create yorutrade`.
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "r2_buckets": [
+    { "binding": "IMAGES", "bucket_name": "yorutrade-images" }
+  ]
+}

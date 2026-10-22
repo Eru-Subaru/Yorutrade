@@ -1,25 +1,22 @@
 {
   "name": "api",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
   "type": "module",
   "scripts": {
-    "dev": "tsx watch src/server.ts",
-    "build": "tsc",
-    "start": "node dist/server.js"
+    "dev": "wrangler dev --port 8787 --var LOCAL_DEV:true",
+    "build": "tsc --noEmit",
+    "test": "tsx --test test/*.test.ts",
+    "deploy": "wrangler deploy",
+    "db:local": "wrangler d1 migrations apply yorutrade --local",
+    "db:remote": "wrangler d1 migrations apply yorutrade --remote"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.19",
-    "@types/express": "^5.0.6",
+    "@cloudflare/workers-types": "^5.20261022.1",
     "@types/node": "^26.3.0",
+    "miniflare": "^5.20261019.1-beta",
     "tsx": "^4.23.12",
-    "typescript": "^7.0.2"
-  },
-  "dependencies": {
-    "cors": "^2.8.6",
-    "dotenv": "^17.4.2",
-    "express": "^5.2.1",
-    "zod": "^4.4.3"
+    "typescript": "^7.0.2",
+    "wrangler": "^4.0.0"
   }
 }

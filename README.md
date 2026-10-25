@@ -37,7 +37,7 @@ The repository contains the integration; deploying needs your authenticated Clou
    ```
 
 3. Put the returned D1 database ID in `apps/api/wrangler.jsonc`. Keep both **r2.dev** and R2 public custom-domain access disabled. The Worker reads photos through its R2 binding; no S3 keys are needed.
-4. Set `ALLOWED_ORIGINS` in that file to the exact website origin (initially `https://yorutrade.vercel.app`). Keep `LOCAL_DEV` disabled in production.
+4. Set `ALLOWED_ORIGINS` in that file to the exact website origin (initially `https://yorutrade-web.vercel.app`). Keep `LOCAL_DEV` disabled in production.
 5. Generate a random secret containing at least 32 characters and store the same value in the Worker and Vercel:
 
    ```sh
@@ -50,7 +50,7 @@ The repository contains the integration; deploying needs your authenticated Clou
 
    | Variable | Value |
    | --- | --- |
-   | `APP_ORIGIN` | `https://yorutrade.vercel.app` (or your exact custom-domain origin) |
+   | `APP_ORIGIN` | `https://yorutrade-web.vercel.app` (or your exact custom-domain origin) |
    | `CLOUDFLARE_API_URL` | The HTTPS root URL returned by Worker deployment |
    | `API_PROXY_SECRET` | The same secret stored in the Worker |
 

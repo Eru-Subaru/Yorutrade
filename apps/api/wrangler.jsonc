@@ -1,0 +1,32 @@
+{
+	"$schema": "../../node_modules/wrangler/config-schema.json",
+	"name": "yorutrade-api",
+	"account_id": "9b100ecc8878fd0b6c0f5baaf8c34779",
+	"main": "src/worker.ts",
+	"compatibility_date": "2026-10-01",
+	"workers_dev": true,
+	"triggers": {
+		"crons": [
+			"17 3 * * *"
+		]
+	},
+	"vars": {
+		"ALLOWED_ORIGINS": "https://yorutrade-web.vercel.app",
+		"LOCAL_DEV": "false"
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "yorutrade",
+			// Production database; local development still uses isolated local storage.
+			"database_id": "fb1e334b-55d0-459a-aa03-25ddb61749de",
+			"migrations_dir": "migrations"
+		}
+	],
+	"r2_buckets": [
+		{
+			"binding": "IMAGES",
+			"bucket_name": "yorutrade-images"
+		}
+	]
+}
